@@ -1,0 +1,57 @@
+interface vehicle
+{
+//int speed=0;
+//int gear=0;
+void changegear(int a);
+void speedup(int a);
+void applybreakes(int a);
+}
+class bicycle implements vehicle{
+int speed;
+int gear;
+public void changegear(int newgear)
+{
+gear=newgear;
+}
+public void speedup(int increment){
+speed=speed+increment;
+}
+public void applybreakes(int decrement){
+speed=speed-decrement;}
+void presentstate()
+{
+System.out.println("Speed:"+speed+" Gear:"+gear);
+}
+}
+class bike implements vehicle{
+int speed;
+int gear;
+public void changegear(int newgear)
+{
+gear=newgear;}
+public void speedup(int increment){
+speed=speed+increment;
+}
+public void applybreakes(int decrement){
+speed=speed-decrement;}
+void presentstate()
+{
+System.out.println("Speed:"+speed+" Gear:"+gear);
+}}
+class SG{
+public static void main(String args[])
+{bicycle bc=new bicycle();
+bc.changegear(3);
+bc.speedup(4);
+bc.applybreakes(2);
+bc.presentstate();
+bike b=new bike();
+b.changegear(10);
+b.speedup(40);
+b.applybreakes(2);
+b.presentstate();}}
+
+
+output:
+speed:2 Gear:3
+speed:38 gear:10
